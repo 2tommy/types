@@ -19,5 +19,9 @@
   "bugs": {
     "url": "https://github.com/immodel/types/issues"
   },
-  "homepage": "https://github.com/immodel/types"
+  "homepage": "https://github.com/immodel/types",
+  "devDependencies": {
+    "mocha": "^2.2.0",
+    "immodel": "git://github.com/immodel/immodel"
+  }
 }
