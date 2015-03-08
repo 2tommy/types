@@ -1,6 +1,6 @@
 {
   "name": "immodel-types",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Add type registration capabilities to immodel",
   "main": "index.js",
   "scripts": {
