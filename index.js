@@ -1,11 +1,11 @@
 var types = {};
 
-module.exports = function(model) {
-  model.lookup = function(name) {
+module.exports = function() {
+  this.lookup = function(name) {
     return types[name];
   };
 
-  model.type = function(name, fn) {
+  this.type = function(name, fn) {
     var type = this;
     
     if(arguments.length === 2) {
@@ -19,9 +19,9 @@ module.exports = function(model) {
     return this;
   };
 
-  model.is = function(type) {
+  this.is = function(type) {
     return !! (type && type.__isModel);
   };
   
-  model.__isModel = true;
+  this.__isModel = true;
 };
