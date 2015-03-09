@@ -7,14 +7,14 @@ module.exports = function() {
 
   this.type = function(name, fn) {
     var type = this;
-    
+
     if(arguments.length === 2) {
       var old = this.mutable;
       this.mutable = false;
-      type = fn(this);
+      type = fn.call(this);
       this.mutable = old;
     }
-    
+
     types[name] = type;
     return this;
   };
@@ -22,6 +22,6 @@ module.exports = function() {
   this.is = function(type) {
     return !! (type && type.__isModel);
   };
-  
+
   this.__isModel = true;
 };
